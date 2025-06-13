@@ -44,7 +44,7 @@ export default function Home() {
         <h1 className="font-major text-[128px]">GamesStore</h1>
 
         <div className="relative w-full h-[45px] overflow-hidden mb-[-20px] z-10">
-          <div className="absolute w-[105%] left-[-3%] h-full bg-white rounded-[50%]" />
+          <div className="absolute w-[105%] left-[-3%] h-full bg-bg-primary rounded-[50%]" />
         </div>
 
         <div className="w-full flex justify-center overflow-hidden">
@@ -74,7 +74,7 @@ export default function Home() {
           </Carousel>
         </div>
         <div className="relative w-full h-[45px] overflow-hidden mt-[-20px] z-10">
-          <div className="absolute w-[105%] left-[-3%] h-full bg-white rounded-[50%]" />
+          <div className="absolute w-[105%] left-[-3%] h-full bg-bg-primary rounded-[50%]" />
         </div>
         <Link
           href="#"
@@ -83,7 +83,7 @@ export default function Home() {
           Explorar{" "}
           <Triangle
             size={16}
-            className="rotate-90 text-green-500 fill-green-500 group-hover:text-green-400 transition-transform duration-300 ease-in-out group-hover:fill-green-400 group-hover:rotate-180"
+            className="rotate-90 text-purple-200 fill-purple-200 group-hover:text-purple-600 transition-transform duration-300 ease-in-out group-hover:fill-purple-600 group-hover:rotate-180"
           />
         </Link>
         <div className="mt-10 flex items-center  gap-20">

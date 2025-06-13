@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${majorMonoDisplay.variable} ${poppins.variable} antialiased`}
+        className={`${inter.variable} ${majorMonoDisplay.variable} ${poppins.variable} bg-bg-primary antialiased`}
       >
         <Header />
         {children}

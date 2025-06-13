@@ -6,9 +6,9 @@ export default function ShoppingLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
+    <>
       {children}
       <Footer />
-    </div>
+    </>
   );
 }
