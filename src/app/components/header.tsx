@@ -1,10 +1,4 @@
 import {
-  Sheet,
-  SheetContent,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import {
   AlignJustify,
   CircleUserRound,
   Heart,
@@ -13,6 +7,14 @@ import {
   UserRound,
 } from "lucide-react";
 import Link from "next/link";
+
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
 import Label from "./label";
 
 export default function Header() {

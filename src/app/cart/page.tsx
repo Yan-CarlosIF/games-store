@@ -1,6 +1,8 @@
 import { Triangle } from "lucide-react";
-import CartCard from "./components/cart-card";
+
 import { Button } from "@/components/ui/button";
+
+import CartCard from "./components/cart-card";
 
 export default function CartPage() {
   return (

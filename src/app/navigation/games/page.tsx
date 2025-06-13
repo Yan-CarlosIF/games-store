@@ -1,5 +1,5 @@
 import { Triangle } from "lucide-react";
-import ProductCard from "../components/product-card";
+
 import {
   Select,
   SelectContent,
@@ -7,6 +7,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+
+import ProductCard from "../components/product-card";
 
 const filters = [
   {

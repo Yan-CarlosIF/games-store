@@ -1,18 +1,17 @@
 "use client";
 
+import Autoplay from "embla-carousel-autoplay";
+import { Triangle } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useCallback, useEffect, useRef, useState } from "react";
+
 import {
   Carousel,
+  type CarouselApi,
   CarouselContent,
   CarouselItem,
-  type CarouselApi,
 } from "@/components/ui/carousel";
-import { useState, useEffect, useCallback, useRef } from "react";
-
-import { Triangle } from "lucide-react";
-
-import Autoplay from "embla-carousel-autoplay";
-import Link from "next/link";
-import Image from "next/image";
 
 const images = ["/image-4.png", "/image-2.png", "/image-1.png", "/image-3.png"];
 
@@ -61,10 +60,14 @@ export default function Home() {
                     className="basis-3/8 p-0 transition-transform duration-500 ease-out"
                   >
                     <div className="h-[280px] w-full overflow-hidden rounded-md shadow-md">
-                      <img
+                      <Image
                         src={src}
                         alt={`slide-${index}`}
                         className="h-full w-full object-cover"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: "100%", height: "100%" }}
                       />
                     </div>
                   </CarouselItem>

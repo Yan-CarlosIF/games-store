@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+
 import ProductCard from "../components/product-card";
 
 const filters = [

@@ -1,8 +1,9 @@
+import "./globals.css";
+
 import type { Metadata } from "next";
 import { Inter, Major_Mono_Display, Poppins } from "next/font/google";
-import "./globals.css";
+
 import Header from "./components/header";
-import Footer from "./components/footer";
 
 const inter = Inter({
   variable: "--font-inter",

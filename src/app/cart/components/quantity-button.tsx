@@ -1,8 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
+
+import { Button } from "@/components/ui/button";
 
 export default function QuantityButton() {
   const [quantity, setQuantity] = useState(1);

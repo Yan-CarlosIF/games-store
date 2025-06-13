@@ -1,7 +1,9 @@
-import Image from "next/image";
-import ImageShowcase from "../components/image-showcase";
-import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
+import Image from "next/image";
+
+import { Button } from "@/components/ui/button";
+
+import ImageShowcase from "../components/image-showcase";
 
 export default function ProductPage() {
   return (

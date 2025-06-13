@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import QuantityButton from "./quantity-button";
 
 export default function CartCard() {
