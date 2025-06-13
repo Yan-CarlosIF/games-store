@@ -3,11 +3,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.rounded-ellipse {
+  -webkit-clip-path: ellipse(70% 100% at 50% 50%);
+  clip-path: ellipse(70% 100% at 50% 50%);
+}
+
 @theme {
   /* Fonts */
 
   --font-inter: var(--font-inter);
   --font-major: var(--font-major-mono-display);
+  --font-poppins: var(--font-poppins);
 
   /* Colors */
   --color-purple-200: #330e72;
@@ -20,7 +26,7 @@ body {
 }
 
 h1 {
-  font-family: Major Mono Display
+  font-family: Major Mono Display;
 }
 
 @theme inline {

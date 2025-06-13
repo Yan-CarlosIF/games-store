@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Major_Mono_Display } from "next/font/google";
+import { Inter, Major_Mono_Display, Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "./components/header";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -11,6 +12,12 @@ const majorMonoDisplay = Major_Mono_Display({
   variable: "--font-major-mono-display",
   subsets: ["latin"],
   weight: ["400"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +32,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body
+        className={`${inter.variable} ${majorMonoDisplay.variable} ${poppins.variable} antialiased`}
+      >
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

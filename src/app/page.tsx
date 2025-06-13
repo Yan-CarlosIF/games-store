@@ -8,14 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { useState, useEffect, useCallback, useRef } from "react";
 
-import {
-  AlignJustify,
-  CircleUserRound,
-  Heart,
-  Search,
-  ShoppingCart,
-  Triangle,
-} from "lucide-react";
+import { Triangle } from "lucide-react";
 
 import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
@@ -47,34 +40,18 @@ export default function Home() {
 
   return (
     <>
-      <header className="bg-purple-200 h-16 flex items-center px-12">
-        <button className="cursor-pointer">
-          <AlignJustify width={28} height={28} />
-        </button>
-
-        <div className="flex items-center gap-4 ml-auto">
-          <button className="cursor-pointer">
-            <Search width={28} height={28} />
-          </button>
-          <button className="cursor-pointer">
-            <CircleUserRound width={28} height={28} />
-          </button>
-          <button className="cursor-pointer">
-            <Heart width={28} height={28} fill="black" />
-          </button>
-          <button className="cursor-pointer">
-            <ShoppingCart width={28} height={28} fill="black" />
-          </button>
-        </div>
-      </header>
       <main className="flex flex-col mt-8 items-center">
         <h1 className="font-major text-[128px]">GamesStore</h1>
 
-        <div className="w-full flex justify-center py-5 overflow-hidden">
+        <div className="relative w-full h-[45px] overflow-hidden mb-[-20px] z-10">
+          <div className="absolute w-[105%] left-[-3%] h-full bg-white rounded-[50%]" />
+        </div>
+
+        <div className="w-full flex justify-center overflow-hidden">
           <Carousel
             opts={{ dragFree: true }}
             setApi={setApi}
-            plugins={[autoplay.current]} // ✅ plugin adicionado aqui
+            plugins={[autoplay.current]}
           >
             <CarouselContent className="flex gap-3">
               {images.map((src, index) => {
@@ -96,6 +73,9 @@ export default function Home() {
             </CarouselContent>
           </Carousel>
         </div>
+        <div className="relative w-full h-[45px] overflow-hidden mt-[-20px] z-10">
+          <div className="absolute w-[105%] left-[-3%] h-full bg-white rounded-[50%]" />
+        </div>
         <Link
           href="#"
           className="group font-semibold mt-3 flex items-center gap-2 "
@@ -107,16 +87,7 @@ export default function Home() {
           />
         </Link>
         <div className="mt-10 flex items-center  gap-20">
-          <div className="flex flex-col items-center h-[150px] justify-center gap-3">
-            <Image
-              src="/console.png"
-              width={84}
-              height={112}
-              alt="Console icon"
-            />
-            <span className="font-semibold mt-auto text-xl">Consoles</span>
-          </div>
-          <div className="flex flex-col items-center h-[150px] justify-center gap-3">
+          <button className="flex flex-col items-center h-[150px] justify-center gap-3 cursor-pointer">
             <Image
               src="/controller.png"
               width={84}
@@ -125,16 +96,24 @@ export default function Home() {
               className="mt-5"
             />
             <span className="font-semibold mt-auto text-xl">Games</span>
-          </div>
-          <div className="flex flex-col items-center h-[150px] justify-center gap-3">
-            <Image
-              src="/headphone.png"
-              width={84}
-              height={112}
-              alt="headphone icon"
-            />
-            <span className="font-semibold mt-auto text-xl">Acessorios</span>
-          </div>
+          </button>
+          <button className="flex flex-col items-center h-[150px] justify-center gap-3 cursor-pointer">
+            <div className="flex gap-3 w-full">
+              <Image
+                src="/headphone.png"
+                width={80}
+                height={80}
+                alt="headphone icon"
+              />
+              <Image
+                src="/console.png"
+                width={50}
+                height={50}
+                alt="Console icon"
+              />
+            </div>
+            <span className="font-semibold mt-auto text-xl">Eletrônicos</span>
+          </button>
         </div>
       </main>
     </>
