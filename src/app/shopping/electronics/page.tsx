@@ -1,5 +1,5 @@
 import { Triangle } from "lucide-react";
-import ProductCard from "../components/product-card";
+
 import {
   Select,
   SelectContent,
@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import ProductCard from "../components/product-card";
 
 const filters = [
   {
@@ -23,12 +24,12 @@ const filters = [
   },
 ];
 
-export default function GamesPage() {
+export default function EletronicsPage() {
   return (
     <div className="px-24 py-4">
       <div className="flex items-center justify-between">
         <div className="mt-4 flex items-center gap-1">
-          <h2 className="text-2xl font-bold">Games</h2>
+          <h2 className="text-2xl font-bold">Eletrônicos</h2>
           <Triangle
             size={16}
             className="rotate-90 fill-purple-200 text-purple-200"
@@ -49,7 +50,7 @@ export default function GamesPage() {
       </div>
       <main className="mt-7 grid w-full grid-cols-5 justify-end gap-10">
         {Array.from({ length: 10 }).map((_, index) => (
-          <ProductCard image="/games-cover/gow.png" key={index} />
+          <ProductCard videoRatio image="/eletronics/ps4.png" key={index} />
         ))}
       </main>
     </div>

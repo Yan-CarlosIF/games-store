@@ -5,16 +5,16 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto flex flex-col items-center font-poppins bg-purple-200 px-12 py-9">
-      <div className="bg-white w-full rounded-[20px] justify-around flex items-center h-[146px]">
-        <h2 className="text-3xl  font-semibold">
+    <footer className="font-poppins mt-auto flex flex-col items-center bg-purple-200 px-12 py-9">
+      <div className="flex h-[146px] w-full items-center justify-around rounded-[20px] bg-white">
+        <h2 className="text-3xl font-semibold">
           Inscreva-se na nossa newsletter
         </h2>
         <div className="flex items-center gap-3">
-          <div className="w-[380px] text-white bg-purple-200/20 rounded-[20px] h-16 p-4">
+          <div className="h-16 w-[380px] rounded-[20px] bg-purple-200/20 p-4 text-white">
             <input
               type="email"
-              className="w-full placeholder:text-white h-full border-none outline-none"
+              className="h-full w-full border-none outline-none placeholder:text-white"
               placeholder="Email address"
             />
           </div>
@@ -23,28 +23,28 @@ export default function Footer() {
           </Button>
         </div>
         <div className="flex items-center gap-4">
-          <Headphones className="text-purple-200 size-[45px]" />
+          <Headphones className="size-[45px] text-purple-200" />
           <div>
-            <h3 className="font-semibold text-xl">Fale conosco</h3>
+            <h3 className="text-xl font-semibold">Fale conosco</h3>
             <p>(88) 99686-3539</p>
           </div>
         </div>
       </div>
 
       <div className="flex flex-col text-neutral-100">
-        <h1 className="text-6xl mt-10">GamesStore</h1>
+        <h1 className="mt-10 text-6xl">GamesStore</h1>
         <p className="pl-4 leading-9">Aracati, Brasil</p>
-        <div className="flex pl-4 gap-6 mt-4">
+        <div className="mt-4 flex gap-6 pl-4">
           <Link
             href=""
-            className="cursor-pointer size-8 border border-neutral-100 rounded-sm flex justify-center items-center p-1"
+            className="flex size-8 cursor-pointer items-center justify-center rounded-sm border border-neutral-100 p-1"
           >
             <Facebook size={20} />
           </Link>
           <Link
             target="_blank"
             href="https://x.com/Yanzinn1_"
-            className="cursor-pointer border size-8 border-neutral-100 rounded-sm flex justify-center items-center p-1"
+            className="flex size-8 cursor-pointer items-center justify-center rounded-sm border border-neutral-100 p-1"
           >
             <Twitter size={20} />
           </Link>

@@ -24,7 +24,7 @@ export default function Home() {
     Autoplay({
       delay: 3000,
       stopOnInteraction: false,
-    })
+    }),
   );
 
   const onSelect = useCallback(() => {
@@ -40,14 +40,14 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex flex-col mt-8 items-center">
+      <main className="mt-8 flex flex-col items-center">
         <h1 className="font-major text-[128px]">GamesStore</h1>
 
-        <div className="relative w-full h-[45px] overflow-hidden mb-[-20px] z-10">
-          <div className="absolute w-[105%] left-[-3%] h-full bg-bg-primary rounded-[50%]" />
+        <div className="relative z-10 mb-[-20px] h-[45px] w-full overflow-hidden">
+          <div className="bg-bg-primary absolute left-[-3%] h-full w-[105%] rounded-[50%]" />
         </div>
 
-        <div className="w-full flex justify-center overflow-hidden">
+        <div className="flex w-full justify-center overflow-hidden">
           <Carousel
             opts={{ dragFree: true }}
             setApi={setApi}
@@ -58,13 +58,13 @@ export default function Home() {
                 return (
                   <CarouselItem
                     key={index}
-                    className="basis-3/8 transition-transform duration-500 ease-out p-0"
+                    className="basis-3/8 p-0 transition-transform duration-500 ease-out"
                   >
-                    <div className="w-full h-[280px] overflow-hidden rounded-md shadow-md">
+                    <div className="h-[280px] w-full overflow-hidden rounded-md shadow-md">
                       <img
                         src={src}
                         alt={`slide-${index}`}
-                        className="w-full h-full object-cover"
+                        className="h-full w-full object-cover"
                       />
                     </div>
                   </CarouselItem>
@@ -73,21 +73,24 @@ export default function Home() {
             </CarouselContent>
           </Carousel>
         </div>
-        <div className="relative w-full h-[45px] overflow-hidden mt-[-20px] z-10">
-          <div className="absolute w-[105%] left-[-3%] h-full bg-bg-primary rounded-[50%]" />
+        <div className="relative z-10 mt-[-20px] h-[45px] w-full overflow-hidden">
+          <div className="bg-bg-primary absolute left-[-3%] h-full w-[105%] rounded-[50%]" />
         </div>
         <Link
-          href="#"
-          className="group font-semibold mt-3 flex items-center gap-2 "
+          href="/shopping/games"
+          className="group mt-3 flex items-center gap-2 font-semibold"
         >
           Explorar{" "}
           <Triangle
             size={16}
-            className="rotate-90 text-purple-200 fill-purple-200 group-hover:text-purple-600 transition-transform duration-300 ease-in-out group-hover:fill-purple-600 group-hover:rotate-180"
+            className="rotate-90 fill-purple-200 text-purple-200 transition-transform duration-300 ease-in-out group-hover:rotate-180 group-hover:fill-purple-600 group-hover:text-purple-600"
           />
         </Link>
-        <div className="mt-10 flex items-center  gap-20">
-          <button className="flex flex-col items-center h-[150px] justify-center gap-3 cursor-pointer">
+        <div className="mt-10 flex items-center gap-20">
+          <Link
+            href="/shopping/games"
+            className="flex h-[150px] cursor-pointer flex-col items-center justify-center gap-3"
+          >
             <Image
               src="/controller.png"
               width={84}
@@ -95,10 +98,13 @@ export default function Home() {
               alt="Controller icon"
               className="mt-5"
             />
-            <span className="font-semibold mt-auto text-xl">Games</span>
-          </button>
-          <button className="flex flex-col items-center h-[150px] justify-center gap-3 cursor-pointer">
-            <div className="flex gap-3 w-full">
+            <span className="mt-auto text-xl font-semibold">Games</span>
+          </Link>
+          <Link
+            href="/shopping/electronics"
+            className="flex h-[150px] cursor-pointer flex-col items-center justify-center gap-3"
+          >
+            <div className="flex w-full gap-3">
               <Image
                 src="/headphone.png"
                 width={80}
@@ -112,8 +118,8 @@ export default function Home() {
                 alt="Console icon"
               />
             </div>
-            <span className="font-semibold mt-auto text-xl">Eletrônicos</span>
-          </button>
+            <span className="mt-auto text-xl font-semibold">Eletrônicos</span>
+          </Link>
         </div>
       </main>
     </>
