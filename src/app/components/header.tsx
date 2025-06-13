@@ -36,8 +36,8 @@ export default function Header() {
             <ul className="flex flex-col gap-3 pl-3">
               <Label href="/" label="Home" />
               <Label href="/" label="Mais vendidos" />
-              <Label href="/shopping/games" label="Games" />
-              <Label href="/shopping/electronics" label="Eletrônicos" />
+              <Label href="/navigation/games" label="Games" />
+              <Label href="/navigation/electronics" label="Eletrônicos" />
             </ul>
           </main>
           <Link
@@ -63,7 +63,7 @@ export default function Header() {
         <Link href="/" className="cursor-pointer">
           <Heart width={28} height={28} fill="white" />
         </Link>
-        <Link href="/" className="cursor-pointer">
+        <Link href="/cart" className="cursor-pointer">
           <ShoppingCart width={28} height={28} fill="white" />
         </Link>
       </div>

@@ -47,9 +47,13 @@ export default function GamesPage() {
           </SelectContent>
         </Select>
       </div>
-      <main className="mt-7 grid w-full grid-cols-5 justify-end gap-10">
-        {Array.from({ length: 10 }).map((_, index) => (
-          <ProductCard image="/games-cover/gow.png" key={index} />
+      <main className="mt-7 grid w-full grid-cols-6 justify-end gap-10">
+        {Array.from({ length: 20 }).map((_, index) => (
+          <ProductCard
+            id={index.toString()}
+            image="/games-cover/gow.png"
+            key={index}
+          />
         ))}
       </main>
     </div>

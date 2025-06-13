@@ -3,17 +3,17 @@ import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
 type GameCardProps = {
-  // href: string;
+  id: string;
   image: string;
   videoRatio?: boolean;
   // title: string;
   // price: number;
 };
 
-export default function ProductCard({ image, videoRatio }: GameCardProps) {
+export default function ProductCard({ id, image, videoRatio }: GameCardProps) {
   return (
     <Link
-      href="#"
+      href={`product/${id}`}
       className="w-full shadow-purple-200 transition-all duration-300 ease-in-out hover:shadow-2xs"
     >
       <div
