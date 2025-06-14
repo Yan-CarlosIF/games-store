@@ -38,12 +38,12 @@ export default function Header() {
             <ul className="flex flex-col gap-3 pl-3">
               <Label href="/" label="Home" />
               <Label href="/" label="Mais vendidos" />
-              <Label href="/navigation/games" label="Games" />
-              <Label href="/navigation/electronics" label="Eletrônicos" />
+              <Label href="/shopping/games" label="Games" />
+              <Label href="/shopping/electronics" label="Eletrônicos" />
             </ul>
           </main>
           <Link
-            href="#"
+            href="/profile"
             className="group mt-auto flex gap-2 text-lg font-semibold text-black/90 transition-colors duration-300 ease-in-out hover:text-black"
           >
             Perfil
@@ -59,10 +59,10 @@ export default function Header() {
         <Link href="/" className="cursor-pointer">
           <Search width={28} height={28} />
         </Link>
-        <Link href="/" className="cursor-pointer">
+        <Link href="/profile" className="cursor-pointer">
           <CircleUserRound width={28} height={28} />
         </Link>
-        <Link href="/" className="cursor-pointer">
+        <Link href="/shopping/wishlist" className="cursor-pointer">
           <Heart width={28} height={28} fill="white" />
         </Link>
         <Link href="/cart" className="cursor-pointer">

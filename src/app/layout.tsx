@@ -1,9 +1,19 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Inter, Major_Mono_Display, Poppins } from "next/font/google";
+import {
+  Inter,
+  Major_Mono_Display,
+  Poppins,
+  Sofia_Sans,
+} from "next/font/google";
 
 import Header from "./components/header";
+
+const sofiaSans = Sofia_Sans({
+  variable: "--font-sofia-sans",
+  subsets: ["latin"],
+});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${majorMonoDisplay.variable} ${poppins.variable} bg-bg-primary antialiased`}
+        className={`${inter.variable} ${majorMonoDisplay.variable} ${poppins.variable} ${sofiaSans.variable} bg-bg-primary antialiased`}
       >
         <Header />
         {children}

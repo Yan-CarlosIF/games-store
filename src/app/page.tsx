@@ -80,7 +80,7 @@ export default function Home() {
           <div className="bg-bg-primary absolute left-[-3%] h-full w-[105%] rounded-[50%]" />
         </div>
         <Link
-          href="/navigation/games"
+          href="/shopping/games"
           className="group mt-3 flex items-center gap-2 font-semibold"
         >
           Explorar{" "}
@@ -91,7 +91,7 @@ export default function Home() {
         </Link>
         <div className="mt-10 flex items-center gap-20">
           <Link
-            href="/navigation/games"
+            href="/shopping/games"
             className="flex h-[150px] cursor-pointer flex-col items-center justify-center gap-3"
           >
             <Image
@@ -104,7 +104,7 @@ export default function Home() {
             <span className="mt-auto text-xl font-semibold">Games</span>
           </Link>
           <Link
-            href="/navigation/electronics"
+            href="/shopping/electronics"
             className="flex h-[150px] cursor-pointer flex-col items-center justify-center gap-3"
           >
             <div className="flex w-full gap-3">
